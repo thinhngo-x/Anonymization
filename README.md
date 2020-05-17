@@ -8,3 +8,5 @@
   - Don't run ./test_knn if you don't want to risk your computer hanged in the middle.
   - On my computer, by setting *maxiter* to 50000, I ran ./test_random_projection with k = 5, projection_dim = 10, on the testb, and finished it in about 7 minutes.
   - There is a problem with the representation.testa.npy so the testa won't work.
+  - Remember the labels : {0 : "O", 1 : "B-MISC", 2 : "I-MISC", 3 : "B-PER",
+                           4 : "I-PER", 5 : "B-ORG", 6 : "I-ORG", 7 : "B-LOC", 8 : "I-LOC"}
