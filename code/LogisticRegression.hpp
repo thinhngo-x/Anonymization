@@ -47,7 +47,7 @@ public:
       The estimate method outputs the predicted Y for a given point x.
      @param x the point for which to estimate Y.
     */
-	int Estimate( const Eigen::VectorXd & x , double threshold=0.5);
+	int Estimate( const Eigen::VectorXd & x , double threshold=5);
 
   int getClassNo();
 };

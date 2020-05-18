@@ -20,7 +20,7 @@ class Dataset {
     public:
         Dataset(const char* file);
 
-        Dataset(const char* file, const char* true_labels);
+        Dataset(const char* file, const char* true_labels, int num_iter);
         /**
           The constructor needs the path of the file as a string.
         */

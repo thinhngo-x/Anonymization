@@ -8,6 +8,7 @@
 #include "KnnClassification.hpp"
 #include "ConfusionMatrix.hpp"
 #include <cstdlib>
+#include <limits.h>
 using namespace std;
 
 /** @file
@@ -26,8 +27,8 @@ int main(int argc, char* argv[]) {
 	}
 		
     // Puts train file in a Dataset object
-	Dataset train_dataset(argv[3], argv[4]);
-	Dataset class_dataset(argv[5], argv[6]);
+	Dataset train_dataset(argv[3], argv[4],50000);
+	Dataset class_dataset(argv[5], argv[6],50000);
 
     // Tests value of projection_dim (should be > 1 < dimension of dataset)
 	int projection_dim=atoi(argv[2]);

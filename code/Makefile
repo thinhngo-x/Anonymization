@@ -3,7 +3,7 @@ ANN_INCLUDE=../../Background/ann_1.1.2/include
 ANN_LIB=../../Background/ann_1.1.2/lib
 NPY=../../Background/libnpy
 
-all: test_dataset test_knn test_random_projection test_roc_curve test_linear_regression convert
+all: test_dataset test_knn test_random_projection test_roc_curve test_linear_regression test_logistic_regression test_linear_regression_random test_logistic_regression_random convert
 
 convert: convert.o
 	cc -g -o convert convert.o
@@ -47,9 +47,14 @@ test_roc_curve: test_roc_curve.cpp ConfusionMatrix.o KnnClassification.o Classif
 test_linear_regression: test_linear_regression.cpp ConfusionMatrix.o LinearRegression.o Classification.o Dataset.o
 	g++ -I$(EIGEN) -Wall -Wextra test_linear_regression.cpp ConfusionMatrix.o LinearRegression.o Classification.o Dataset.o -o test_linear_regression 
 
-test_logistic_regression: test_linear_regression.cpp ConfusionMatrix.o LogisticRegression.o Classification.o Dataset.o
+test_logistic_regression: test_logistic_regression.cpp ConfusionMatrix.o LogisticRegression.o Classification.o Dataset.o
 	g++ -I$(EIGEN) -Wall -Wextra test_logistic_regression.cpp ConfusionMatrix.o LogisticRegression.o Classification.o Dataset.o -o test_logistic_regression
 
+test_linear_regression_random: test_linear_regression_random.cpp RandomProjection.o ConfusionMatrix.o LinearRegression.o Classification.o Dataset.o
+	g++ -I$(EIGEN) -Wall -Wextra test_linear_regression_random.cpp RandomProjection.o ConfusionMatrix.o LinearRegression.o Classification.o Dataset.o -o test_linear_regression_random 
+
+test_logistic_regression_random: test_logistic_regression_random.cpp RandomProjection.o ConfusionMatrix.o LogisticRegression.o Classification.o Dataset.o
+	g++ -I$(EIGEN) -Wall -Wextra test_logistic_regression_random.cpp RandomProjection.o ConfusionMatrix.o LogisticRegression.o Classification.o Dataset.o -o test_logistic_regression_random
 
 .PHONY: all clean
 
@@ -65,3 +70,5 @@ clean:
 	rm -f test_random_projection
 	rm -f test_5q1
 	rm -f test_roc_curve
+	rm -f test_linear_regression
+	rm -f test_logistic_regression

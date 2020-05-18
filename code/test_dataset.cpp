@@ -2,6 +2,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <stdio.h>
+#include <limits.h>
 
 /** @file
  * Test suite for the Dataset class.
@@ -13,7 +14,7 @@ int main(int argc, const char * argv[]){
         return 1;
     }
 
-	Dataset dataset(argv[1], argv[2]);
+	Dataset dataset(argv[1], argv[2], INT_MAX);
     
 	dataset.Show(false);
 	

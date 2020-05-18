@@ -74,9 +74,9 @@ Dataset::Dataset(const char* file)
 }
 
 
-Dataset::Dataset(const char* file, const char* true_labels)
+Dataset::Dataset(const char* file, const char* true_labels, int num_iter)
 {
-	auto maxiter = 50000;
+	auto maxiter = num_iter;
 
 	auto path = true_labels;
 	std::vector<unsigned long>shape;

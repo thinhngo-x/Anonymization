@@ -8,6 +8,7 @@
 #include "KnnClassification.hpp"
 #include "ConfusionMatrix.hpp"
 #include <cstdlib>
+#include <limits.h>
 using namespace std;
 
 /** @file
@@ -36,8 +37,8 @@ int main(int argc, char* argv[]) {
 	}
 	
     // Puts train and test files in a Dataset object
-	Dataset train_dataset(argv[2], argv[3]);
-	Dataset class_dataset(argv[4], argv[5]);
+	Dataset train_dataset(argv[2], argv[3],150000);
+	Dataset class_dataset(argv[4], argv[5],10000);
     
     // Checks which column is the class label
     int col_class;
