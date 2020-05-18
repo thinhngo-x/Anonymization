@@ -60,7 +60,7 @@ void LogisticRegression::Setup() {
 	}
 	*m_X += X;
 	*m_Z += Z;
-	double lambda = 5;
+	double lambda = 1;
 	newton_raphson(lambda,1);
 }
 

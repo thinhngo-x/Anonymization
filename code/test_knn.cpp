@@ -22,7 +22,7 @@ void msgleave(char* argv[]) {
 
 int main(int argc, char* argv[]) {
     // Tests correct usage
-	if (argc < 4) {
+	if (argc < 6) {
 		msgleave(argv);
 		return 1;
 	}
