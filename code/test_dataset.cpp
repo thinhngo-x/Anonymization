@@ -9,7 +9,7 @@
  */
 int main(int argc, const char * argv[]){
 	if (argc < 3) {
-        std::cout << "Usage: " << argv[0] << " <dataset_file>" << std::endl;
+        std::cout << "Usage: " << argv[0] << " <dataset_file> <true_labels_file>" << std::endl;
         return 1;
     }
 

@@ -76,7 +76,6 @@ Dataset::Dataset(const char* file)
 
 Dataset::Dataset(const char* file, const char* true_labels)
 {
-	auto maxiter = 50000;
 
 	auto path = true_labels;
 	std::vector<unsigned long>shape;
@@ -85,6 +84,7 @@ Dataset::Dataset(const char* file, const char* true_labels)
 	
 	shape.clear();
 	labels.clear();
+	std::cout<<"Loading true_labels ..."<<std::endl;
 	npy::LoadArrayFromNumpy(path, shape, fortran_order, labels);
 
 	m_nsamples = shape[0];
@@ -105,7 +105,8 @@ Dataset::Dataset(const char* file, const char* true_labels)
 
 	std::vector<float> data;
 	path = file;
-
+	
+	std::cout<<"Loading representation ..."<<std::endl;
 	shape.clear();
 	data.clear();
 	npy::LoadArrayFromNumpy(path, shape, fortran_order, data);

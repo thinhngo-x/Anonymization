@@ -3,7 +3,7 @@ ANN_INCLUDE=../ann_1.1.2/include
 ANN_LIB=../ann_1.1.2/lib
 NPY=../libnpy
 
-all: test_dataset test_1q1 test_2q1 test_3q1 test_3q2 test_4q1 test_knn test_random_projection test_roc_curve
+all: test_dataset test_knn test_random_projection test_roc_curve
 
 Dataset.o: Dataset.cpp ../libnpy/npy.hpp
 	g++ -c -I$(EIGEN) -I$(NPY) -Wall -Wextra Dataset.cpp
@@ -22,21 +22,6 @@ RandomProjection.o: RandomProjection.cpp
 
 test_dataset: test_dataset.cpp Dataset.o
 	g++ -I$(EIGEN) -Wall -Wextra test_dataset.cpp Dataset.o -o test_dataset
-
-test_1q1: test_1q1.cpp KnnClassification.o Classification.o Dataset.o
-	g++ -I$(EIGEN) -I$(ANN_INCLUDE) -Wall -Wextra test_1q1.cpp KnnClassification.o Classification.o Dataset.o -o test_1q1 -L$(ANN_LIB) -lANN 
-
-test_2q1: test_2q1.cpp KnnClassification.o Classification.o Dataset.o
-	g++ -I$(EIGEN) -I$(ANN_INCLUDE) -Wall -Wextra test_2q1.cpp KnnClassification.o Classification.o Dataset.o -o test_2q1 -L$(ANN_LIB) -lANN 
-
-test_3q1: test_3q1.cpp RandomProjection.o Dataset.o
-	g++ -I$(EIGEN) -Wall -Wextra test_3q1.cpp RandomProjection.o Dataset.o -o test_3q1
-
-test_3q2: test_3q2.cpp RandomProjection.o Dataset.o
-	g++ -I$(EIGEN) -Wall -Wextra test_3q2.cpp RandomProjection.o Dataset.o -o test_3q2
-
-test_4q1: test_4q1.cpp ConfusionMatrix.o
-	g++ -I$(EIGEN) -Wall -Wextra test_4q1.cpp ConfusionMatrix.o -o test_4q1
 
 test_knn: test_knn.cpp ConfusionMatrix.o KnnClassification.o Classification.o Dataset.o
 	g++ -I$(EIGEN) -I$(ANN_INCLUDE) -Wall -Wextra test_knn.cpp ConfusionMatrix.o KnnClassification.o Classification.o Dataset.o -o test_knn -L$(ANN_LIB) -lANN 

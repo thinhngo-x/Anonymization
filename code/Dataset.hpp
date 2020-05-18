@@ -54,6 +54,7 @@ class Dataset {
     	  int getDim();
 
     private:
+        int maxiter = 50000;
         /**
           The dimension of the dataset.
         */
