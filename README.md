@@ -18,4 +18,5 @@
       - run ./convert [csv_file] >> .train/.test to convert to svm file format 
       - run ./svm-train [training file] ==> the model file is generated and the details of the relevant parameters are displayed
       - run ./svm-predict [testing file] [training file].model [output file] ==> the accuracy is displayed and the predicted class labels can be found in output file
+      - ***can use options too for different kernel
   - Added few classifiers to the ipynb file "Copy_of_Anonymization_BERT.ipynb"
