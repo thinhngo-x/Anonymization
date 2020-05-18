@@ -10,3 +10,11 @@
   - There is a problem with the representation.testa.npy so the testa won't work.
   - Remember the labels : {0 : "O", 1 : "B-MISC", 2 : "I-MISC", 3 : "B-PER",
                            4 : "I-PER", 5 : "B-ORG", 6 : "I-ORG", 7 : "B-LOC", 8 : "I-LOC"}
+
+18/05 15:15 Chin Wei
+  - I have downloaded the files in github but unable to run even the testdata code due to an unknown reason, will recitify it later. (even change the maxiter)
+  - Added some files related to linear and logistic regression
+  - I checked the libSVM provided by the TD, extract the executable and find a converter (written in C). The usage as below:
+      run ./svm-train [training file] ==> the model file is generated and the details of the relevant parameters are displayed
+      run ./svm-predict [testing file] [training file].model [output file] ==> the accuracy is displayed and the predicted class labels can be found in output file
+  - Added few classifiers to the ipynb file "Copy_of_Anonymization_BERT.ipynb"
