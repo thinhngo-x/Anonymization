@@ -11,19 +11,19 @@
 */
 
 int main(int argc, const char * argv[]){
-	if (argc < 6) {
-        std::cout << "Usage: " << argv[0] << " <k> <train_file> <train_label> <test_file> <test_label> [ <column_for_classification> ]" << std::endl;
+	if (argc < 5) {
+        std::cout << "Usage: " << argv[0] << " <train_file> <train_label> <test_file> <test_label> [ <column_for_classification> ]" << std::endl;
         return 1;
     }
 
-	std::cout<< "Reading training dataset "<<argv[1]<<"..."<<std::endl;
+	std::cout<< "Reading dataset ..."<<std::endl;
 
-	Dataset train_dataset(argv[2], argv[3]);
-	Dataset class_dataset(argv[4], argv[5]);
+	Dataset train_dataset(argv[1], argv[2]);
+	Dataset class_dataset(argv[3], argv[4]);
     
     int col_class;
     if (argc == 4) {
-    	col_class = atoi(argv[3]);
+    	col_class = atoi(argv[5]);
     } else {
 		col_class = 0;
 		std::cout<< "No column specified for classification, assuming first column of dataset ("<< col_class <<")."<<std::endl;    
