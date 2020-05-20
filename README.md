@@ -1,4 +1,4 @@
-# Anonymization
+# INF442 :  projet informatique 9GDPR in practice:  data anonymization
 
 ## Usage
 The folders **ann_1.1.2**, **eigen-eigen-323c052e1731** and **libnpy** are the useful library for C++.
@@ -28,3 +28,5 @@ https://drive.google.com/drive/folders/1KbPiBjhBg70Cy4LgxMa2jOcMCtHQMTKz?usp=sha
 The results can also be found in this drive.
 
 The folder **SVM** is the tools provided by the TD, we can refer to the TD8 for its usage.
+
+You may refer to the pdf for the results.
