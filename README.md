@@ -18,11 +18,15 @@ The functions of each executable are as follows: (for the necessary arguments, y
     - perform logistic regression for classification to the dataset
   - test_logistic_regression_random
     - perform logistic regression for classification to the projected dataset
+    
+*note that convert is just a function to parse the data file into the format of libSVM*
 
 For the subproblem 2,subproblem 3 and subproblem 4, the iPython codes can be found in the folder **Notebook**.
 Note that it is required to connect to the following drives, make sure you are connected to it before execute the code:
 https://drive.google.com/drive/folders/1KbPiBjhBg70Cy4LgxMa2jOcMCtHQMTKz?usp=sharing
 The results can also be found in this drive.
+
+The folder **SVM** is the tools provided by the TD, we can refer to the TD8 for its usage.
 
 ## Changelog
 17/05 18:44 Thinh
