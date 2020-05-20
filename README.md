@@ -1,4 +1,4 @@
-# INF442 :  projet informatique 9     GDPR in practice:  data anonymization
+# INF442 :  projet informatique 9 - GDPR in practice:  data anonymization
 
 ## Usage
 The folders **ann_1.1.2**, **eigen-eigen-323c052e1731** and **libnpy** are the useful library for C++.
