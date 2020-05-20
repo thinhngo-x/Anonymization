@@ -1,5 +1,4 @@
-# INF442 :  projet informatique 9
-# GDPR in practice:  data anonymization
+# INF442 :  projet informatique 9     GDPR in practice:  data anonymization
 
 ## Usage
 The folders **ann_1.1.2**, **eigen-eigen-323c052e1731** and **libnpy** are the useful library for C++.
@@ -21,7 +20,7 @@ The functions of each executable are as follows: (for the necessary arguments, y
   - test_logistic_regression_random
     - perform logistic regression for classification to the projected dataset
     
-*note that convert is just a function to parse the data file into the format of libSVM*
+*Note that convert is just a function to parse the data file into the format of libSVM*
 
 For the subproblem 2,subproblem 3 and subproblem 4, the iPython codes can be found in the folder **Notebook**.
 Note that it is required to connect to the following drives, make sure you are connected to it before execute the code:
