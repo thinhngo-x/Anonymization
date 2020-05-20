@@ -27,6 +27,8 @@ Note that it is required to connect to the following drives, make sure you are c
 https://drive.google.com/drive/folders/1KbPiBjhBg70Cy4LgxMa2jOcMCtHQMTKz?usp=sharing
 The results can also be found in this drive.
 
+The folder **data** is the data of ConLL-2003, in .npy format.
+
 The folder **SVM** is the tools provided by the TD, we can refer to the TD8 for its usage.
 
 You may refer to the pdf for the results.
